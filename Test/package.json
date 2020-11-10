@@ -1,0 +1,30 @@
+{
+  "name": "gamee-js",
+  "version": "2.4.0",
+  "description": "Gamee JS SDK",
+  "main": "gamee/src/index.js",
+  "scripts": {
+    "test": "mocha tests",
+    "test:mocha": "mocha tests",
+    "test:mocha:watch": "webpack-dev-server --hot --config config/webpack.mocha.js",
+    "b:dist": "webpack --env=prod --config config/webpack.config.js --progress --profile --colors",
+    "watch": "webpack --env=prod --config config/webpack.config.js --progress --profile --colors --watch",
+    "start": "start npm run watch && start npm run test:mocha:watch"
+  },
+  "bugs": {
+    "url": "https://github.com/gameeapp/gamee-js/issues"
+  },
+  "homepage": "https://github.com/gameeapp/gamee-js",
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.5.1",
+    "banner-webpack-plugin": "^0.2.3",
+    "html-webpack-plugin": "^2.29.0",
+    "mocha": "^3.4.2",
+    "mocha-loader": "^1.1.1",
+    "webpack": "^2.7.0",
+    "webpack-dev-server": "^2.11.3",
+    "webpack-merge": "^4.1.0"
+  }
+}
